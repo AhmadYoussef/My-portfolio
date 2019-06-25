@@ -1,6 +1,7 @@
 @import "../../assets/Scss/variable.scss";
 $shield-width: 170px;
 .shieldPres{
+    display: inline-block;
     background-color: transparent;
     width: $shield-width;
     perspective: 1000px;
