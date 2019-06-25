@@ -1,0 +1,38 @@
+@import '../assets/Scss/variable.scss';
+.about{
+    background-color: $gray-color;
+    color: $black-color;
+    padding: 5% 0;
+
+    h2{
+        margin: 0;
+        text-align: center;
+        padding: 30px ;
+    }
+    .aboutContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        p{
+            width: 55%;
+        }
+        .divider{
+            width: 2px;
+            background-color: $dark-orange;
+            align-self: stretch;
+            border-radius: 15px;
+        }
+        .aboutImage{
+            width: 30%;
+            padding: 20px 0;
+            img{
+                width: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        }
+
+    }
+}

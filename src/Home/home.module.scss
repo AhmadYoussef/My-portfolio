@@ -1,0 +1,34 @@
+@import '../assets/Scss/variable.scss';
+.homeBackground{
+    position: relative;
+    z-index: -1;
+    height: calc(100vh - #{$nav-height});
+    background: linear-gradient(180deg, rgba(51, 51, 51, 0.8) 0%, rgba(51, 51, 51, 0.8) 0), url('../assets/images/backgroundHome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .center{
+        color: white;
+        h2{
+            margin: 0;
+            font-family: inherit;
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 500;
+        }
+        .dowAndLogo{
+            p{
+                margin: 0;
+            }
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        span{
+            color:$dark-orange;
+        }
+    }
+}
