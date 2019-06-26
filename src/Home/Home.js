@@ -12,11 +12,11 @@ const Home = () => {
                     <p>Feel free to download my CV <span>Here:</span> <br />
                         <span>German</span> - <span>English</span>
                     </p>
-                    <div>
-                        <img src="" alt="k" />
-                        <img src="" alt="k" />
-                        <img src="" alt="l" />
-                        <img src="" alt="s" />
+                    <div className={classes.logos}>
+                        <img src={require('../assets/images/svg/xking.svg')} alt="xking" />
+                        <img src={require('../assets/images/svg/linkedin.svg')} alt="linkedin" />
+                        <img src={require('../assets/images/svg/pen.svg')} alt="pen" />
+                        <img src={require('../assets/images/svg/github.svg')} alt="github" />
                     </div>
                 </div>
             </div>

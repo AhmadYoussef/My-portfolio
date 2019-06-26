@@ -3,7 +3,8 @@ $shield-width: 170px;
 .shieldPres{
     display: inline-block;
     background-color: transparent;
-    margin: 0 20px;
+    margin:  0 auto 46px auto;
+    height: 250px;
     width: $shield-width;
     perspective: 1000px;
     &:hover{
