@@ -6,15 +6,21 @@ import Home from './Home/Home';
 import About from './About/About';
 import SkillsList from './Skills/SkillsList';
 import ProjectList from './ProjectList/ProjectList';
+import Contact from './Contact/Contact';
+import Footer from './Footer/Footer';
 
 function App() {
   return (
     <div className={classes.app}>
       <NavBar />
-      <Home />
-      <About />
-      <SkillsList />
-      <ProjectList />
+      <main>
+        <Home />
+        <About />
+        <SkillsList />
+        <ProjectList />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }

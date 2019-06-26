@@ -1,5 +1,6 @@
 @import '../assets/Scss/variable.scss';
 .projectList{
+    // background-color: $gray-color;
     h2{
         color: $black-color;
         margin: 0;
@@ -7,6 +8,10 @@
         padding: 30px ;
     }
     .projectContainer{
-        
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1600px;
     }
 }

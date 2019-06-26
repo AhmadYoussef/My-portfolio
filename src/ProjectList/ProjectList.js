@@ -8,6 +8,10 @@ const ProjectList = () => {
             <h2>Projects</h2>
             <div className={classes.projectContainer}>
                 <Project />
+                <Project />
+                <Project />
+                <Project />
+                <Project />
             </div>
         </div>
     );

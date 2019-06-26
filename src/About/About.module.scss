@@ -14,12 +14,13 @@
         justify-content: space-between;
         align-items: center;
         width: 80%;
+        max-width: 1200px;
         margin: 0 auto;
         p{
             width: 55%;
         }
         .divider{
-            width: 2px;
+            padding: 1.5px;
             background-color: $dark-orange;
             align-self: stretch;
             border-radius: 15px;
@@ -34,5 +35,27 @@
             }
         }
 
+    }
+}
+@media screen and (max-width: 700px){
+    .about{
+        .aboutContainer{
+            flex-direction: column-reverse;
+            p{
+                width: 100%;
+            }
+            .aboutImage{
+                width: 40%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .about{
+        .aboutContainer{
+            .aboutImage{
+                width: 60%;
+            }
+        }
     }
 }
