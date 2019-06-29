@@ -41,7 +41,7 @@ const DesktopNav = (props) => {
                     </NavLink>
                 </ul>
             </div>
-            <div className={classes.languageSite}><Link to="/en" onClick={() => props.updatePath('/')}>EN </Link><span>|</span><Link to="/de" onClick={() => props.updatePath('de')}> DE</Link></div>
+            <div className={classes.languageSite}><Link to="/" onClick={() => props.updatePath('/')}>EN </Link><span>|</span><Link to="/de" onClick={() => props.updatePath('de')}> DE</Link></div>
         </>
     );
 }
