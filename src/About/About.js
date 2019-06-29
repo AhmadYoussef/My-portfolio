@@ -8,7 +8,7 @@ const About = () => {
             <div className={classes.aboutContainer}>
                 <p>
                     Hello, <br />
-                    i am Ahmad Youssef. I am currently training as a front-end developer at the DCI Digital Career Institute in Dusseldorf. I studied telecommunications in Syria and came to Germany in 2016. Since I have a great passion for programming, I wanted to evolve in this area. During this course, I did several projects for friends and clients.
+                    My name Ahmad Youssef. I am currently training as a front-end developer at the DCI Digital Career Institute in Dusseldorf. I studied telecommunications in Syria and came to Germany in 2016. Since I have a great passion for programming, I wanted to evolve in this area. During this course, I did several projects for friends and clients.
                 </p>
                 <div className={classes.divider}></div>
                 <div className={classes.aboutImage}>
