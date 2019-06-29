@@ -1,12 +1,13 @@
 import React from 'react';
 import classes from './Footer.module.scss';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Footer = () => {
     return (
         <footer>
             <div className={classes.topFooter}>
                 <div className={classes.slideTop}>
-                    <img src={require('../assets/images/svg/goTop.svg')} alt="Slide Top" />
+                    <AnchorLink href="#home"  > <img src={require('../assets/images/svg/goTop.svg')} alt="Slide Top" /></AnchorLink>
                 </div>
             </div>
             <div className={classes.middleFooter}>

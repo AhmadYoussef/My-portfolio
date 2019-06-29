@@ -1,25 +1,25 @@
 import React from 'react';
 import classes from './DesktopNav.module.scss';
-
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const DesktopNav = () => {
     return (
         <>
             <div id="#root" className={classes.logo}>
-                <a href="#home"><div style={{ backgroundColor: "#333333" }}>
+                <AnchorLink href="#home"><div style={{ backgroundColor: "#333333" }}>
                     <img src={require("../../assets/images/logo.png")} alt="" />
-                </div></a>
+                </div></AnchorLink>
             </div>
             <div className={classes.nav}>
                 <ul>
-                    <a href="#root"><li>Home</li></a>
+                    <AnchorLink href="#root"><li>Home</li></AnchorLink>
                     <li></li>
-                    <a href="#about"><li>About Me</li></a>
+                    <AnchorLink offset='70' href="#about"><li>About Me</li></AnchorLink>
                 </ul>
                 <ul>
-                    <a href="#project"><li>Project</li></a>
+                    <AnchorLink offset='70' href="#project"><li>Project</li></AnchorLink>
                     <li></li>
-                    <a href="#contact"><li>Content</li></a>
+                    <AnchorLink offset='70' href="#contact"><li>Content</li></AnchorLink>
                 </ul>
             </div>
         </>

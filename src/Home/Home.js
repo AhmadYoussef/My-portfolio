@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './home.module.scss';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Home = () => {
     return (
@@ -20,9 +21,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className={classes.scrolly}>
+            <AnchorLink offset='50' href="#about" className={classes.scrolly}>
                 <div className={classes.dot}></div>
-            </div>
+            </AnchorLink>
         </div>
     );
 }

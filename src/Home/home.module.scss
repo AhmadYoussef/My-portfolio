@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     .scrolly{
+        display: block;
         position: absolute;
         bottom: 30px;
         width: 50px;
@@ -19,6 +20,7 @@
         border-radius: 100px;
         margin: 0 auto;
         overflow: hidden;
+        cursor: pointer;
       }
       .dot{
         width: 10px;
