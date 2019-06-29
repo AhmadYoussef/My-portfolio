@@ -11,7 +11,7 @@ const Skill = (props) => {
                     <img src={require('../../assets/images/languageLogo/' + props.logoImg)} alt="Avatar" />
                 </div>
                 <div className={classes.back}>
-                    <p>{props[props.lang]}</p>
+                    <p>{props.lang === 'de' ? props.de : props.en}</p>
                 </div>
                 <div className={classes.triangle}></div>
             </div>
