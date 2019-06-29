@@ -15,7 +15,7 @@ const Project = (props) => {
                 </div>
                 <div className={classes.btnContainer}>
                     <button>Code</button>
-                    <button>View</button>
+                    <button>{props.btnText}</button>
                 </div>
             </figcaption>
         </figure>

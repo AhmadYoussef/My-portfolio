@@ -6,14 +6,14 @@ import ProjectList from '../ProjectList/ProjectList';
 import Contact from '../Contact/Contact';
 
 const Main = (props) => {
-    console.log(props);
+    const lang = props.match.path.substr(1);
     return (
         <main>
-            <Home />
-            <About />
-            <SkillsList />
-            <ProjectList />
-            <Contact />
+            <Home lang={lang} />
+            <About lang={lang} />
+            <SkillsList lang={lang} />
+            <ProjectList lang={lang} />
+            <Contact lang={lang} />
         </main>
     );
 }

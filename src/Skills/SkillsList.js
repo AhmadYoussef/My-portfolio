@@ -4,10 +4,13 @@ import { Pagination, Navigation } from 'swiper/dist/js/swiper.esm';
 import './slider.scss';
 import classes from './SkillsList.module.scss';
 import Skill from './Skill/Skill';
-import { skills } from '../assets/data/Data';
+import { langData, skills } from '../assets/data/Data';
 
 
-const SkillsList = () => {
+const SkillsList = (props) => {
+    let content = { ...langData.en };
+    if (props.lang === 'de')
+        content = { ...langData.de };
     const params = {
         modules: [Pagination, Navigation], //  must
         slidesPerView: 4, //
@@ -43,13 +46,13 @@ const SkillsList = () => {
     };
     return (
         <div className={classes.SkillsContainer} >
-            <h2>Skills</h2>
+            <h2>{content.skills}</h2>
             <div className={classes.skillsSlider}>
                 <Swiper {...params} className={classes.swiper} >
                     {
                         skills.map(item => (
                             <div key={item.id}>
-                                <Skill {...item} />
+                                <Skill {...item} lang={props.lang} />
                             </div>
                         ))
                     }

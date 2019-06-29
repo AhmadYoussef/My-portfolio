@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Contact.module.scss';
 import Input from './Input';
+import { langData } from '../assets/data/Data';
 
 const initState = [
     {
@@ -38,12 +39,15 @@ const initState = [
 class Contact extends React.Component {
     state = { formTag: [...initState] };
     render() {
+        let content = { ...langData.en };
+        if (this.props.lang === 'de')
+            content = { ...langData.de };
         return (
             <div id="contact" className={classes.contactContainer}>
-                <h2>Contact</h2>
+                <h2>{content.contact}</h2>
 
                 <form>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequatur vitae libero quis nihil! Rerum voluptates, voluptatibus alias ullam ad dolores, earum possimus ea fuga placeat aliquam molestias laudantium iusto.</p>
+                    <p>{content.contactText}</p>
                     {
                         this.state.formTag.map(item => <Input key={item.name} {...item} />)
                     }
