@@ -5,18 +5,21 @@ import NavBar from './NavBar/NavBar';
 import Main from './Main/Main';
 import Footer from './Footer/Footer';
 import NotExist from './notExist/NotExist404';
+import ScrollToTop from './ScrollToTop/ScrollToTop';
 
 function App(props) {
   console.log(props);
   return (
     <div className={classes.app}>
       <BrowserRouter>
-        <NavBar />
-        <Switch>
-          <Route exact path={["/", "/en", "/de"]} component={Main} />
-          <Route component={NotExist} />
-        </Switch>
-        <Footer />
+        <ScrollToTop>
+          <NavBar />
+          <Switch>
+            <Route exact path={["/", "/en", "/de"]} component={Main} />
+            <Route component={NotExist} />
+          </Switch>
+          <Footer />
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   );
