@@ -1,27 +1,47 @@
 import React from 'react';
 import classes from './DesktopNav.module.scss';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { Link } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
+
 
 const DesktopNav = () => {
+    const scroll = (el) => {
+        window.scrollTo({ top: el.offsetTop - 50, left: 0, behavior: 'smooth' })
+    }
     return (
         <>
-            <div id="#root" className={classes.logo}>
-                <AnchorLink href="#home"><div style={{ backgroundColor: "#333333" }}>
-                    <img src={require("../../assets/images/logo.png")} alt="" />
-                </div></AnchorLink>
+            <div className={classes.logo}>
+                <NavLink to="/#home"
+                    smooth>
+                    <div style={{ backgroundColor: "#333333" }}>
+                        <img src={require("../../assets/images/logo.png")} alt="" />
+                    </div>
+                </NavLink>
             </div>
             <div className={classes.nav}>
                 <ul>
-                    <AnchorLink href="#root"><li>Home</li></AnchorLink>
+                    <NavLink smooth to="/#home">
+                        <li>Home</li>
+                    </NavLink>
                     <li></li>
-                    <AnchorLink offset='70' href="#about"><li>About Me</li></AnchorLink>
+                    <NavLink to="/#about"
+                        scroll={el => scroll(el)}>
+                        <li>About Me</li>
+                    </NavLink>
                 </ul>
                 <ul>
-                    <AnchorLink offset='70' href="#project"><li>Project</li></AnchorLink>
+                    <NavLink
+                        to="/#project"
+                        scroll={el => scroll(el)}
+                    ><li>Project</li></NavLink>
                     <li></li>
-                    <AnchorLink offset='70' href="#contact"><li>Content</li></AnchorLink>
+                    <NavLink to="/#contact"
+                        scroll={el => scroll(el)}>
+                        <li>Contact</li>
+                    </NavLink>
                 </ul>
             </div>
+            <div className={classes.languageSite}><Link to="/en">EN </Link><span>|</span><Link to="/de"> DE</Link></div>
         </>
     );
 }

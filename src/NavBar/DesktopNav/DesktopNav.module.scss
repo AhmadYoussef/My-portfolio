@@ -24,6 +24,9 @@
             }
         }
     }
+    .selected{
+        display: none;
+    }
     .nav{
         height: $nav-height;
         display: flex;
@@ -41,6 +44,8 @@
             align-items: center;
             padding: 0;
             margin: 0;
+            
+
             li{
                 padding: 20px 70px;
                 font-size: 1.1rem;
@@ -52,6 +57,15 @@
                     height: 47%;
                 }
             }
+        }
+    }
+    .languageSite{
+        position: absolute;
+        right: 10px;
+        top: 25px;
+        color: white;
+        a{
+            margin:2px;
         }
     }
 

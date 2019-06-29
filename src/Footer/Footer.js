@@ -1,13 +1,16 @@
 import React from 'react';
 import classes from './Footer.module.scss';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 const Footer = () => {
+    const scroll = (el) => {
+        window.scrollTo({ top: el.offsetTop - 50, left: 0, behavior: 'smooth' })
+    }
     return (
         <footer>
             <div className={classes.topFooter}>
                 <div className={classes.slideTop}>
-                    <AnchorLink href="#home"  > <img src={require('../assets/images/svg/goTop.svg')} alt="Slide Top" /></AnchorLink>
+                    <NavLink smooth to="#home"  > <img src={require('../assets/images/svg/goTop.svg')} alt="Slide Top" /></NavLink>
                 </div>
             </div>
             <div className={classes.middleFooter}>

@@ -14,9 +14,21 @@
         }
     }
 }
+.btnLang{
+    display: flex;
+    align-items: center;
+    .languageSite{
+        margin-right: 40px;
+        color: white;
+        a{
+            margin:2px;
+        }
+    }
+    
+}
 .hamburger{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: transparent;
     border: 0;
     cursor: pointer;

@@ -1,26 +1,23 @@
 import React from 'react';
 import classes from './App.module.scss';
-
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import NavBar from './NavBar/NavBar';
-import Home from './Home/Home';
-import About from './About/About';
-import SkillsList from './Skills/SkillsList';
-import ProjectList from './ProjectList/ProjectList';
-import Contact from './Contact/Contact';
+import Main from './Main/Main';
 import Footer from './Footer/Footer';
+import NotExist from './notExist/NotExist404';
 
-function App() {
+function App(props) {
+  console.log(props);
   return (
     <div className={classes.app}>
-      <NavBar />
-      <main>
-        <Home />
-        <About />
-        <SkillsList />
-        <ProjectList />
-        <Contact />
-      </main>
-      <Footer />
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route exact path={["/", "/en", "/de"]} component={Main} />
+          <Route component={NotExist} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

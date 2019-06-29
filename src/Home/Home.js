@@ -1,8 +1,11 @@
 import React from 'react';
 import classes from './home.module.scss';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 const Home = () => {
+    const scroll = (el) => {
+        window.scrollTo({ top: el.offsetTop - 50, left: 0, behavior: 'smooth' })
+    }
     return (
         <div id="home" className={classes.homeBackground}>
             <div className={classes.center}>
@@ -21,9 +24,9 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <AnchorLink offset='50' href="#about" className={classes.scrolly}>
+            <NavLink scroll={el => scroll(el)} to="#about" className={classes.scrolly}>
                 <div className={classes.dot}></div>
-            </AnchorLink>
+            </NavLink>
         </div>
     );
 }
