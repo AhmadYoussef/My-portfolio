@@ -2,7 +2,7 @@
 .homeBackground{
     position: relative;
     z-index: -1;
-    height: calc(100vh - #{$nav-height});
+    height: 100vh;
     background: linear-gradient(180deg, rgba(51, 51, 51, 0.8) 0%, rgba(51, 51, 51, 0.8) 0), url('../assets/images/backgroundHome.jpg');
     background-size: cover;
     background-position: center;
@@ -10,6 +10,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .scrolly{
+        position: absolute;
+        bottom: 30px;
+        width: 50px;
+        height: 75px;
+        border: 5px solid $dark-orange;
+        border-radius: 100px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .dot{
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+        margin: 10px auto;
+        position: relative;
+        animation:  scroll-down 5s infinite;
+      }
     .center{
         color: white;
         h2{
@@ -41,6 +60,17 @@
         }
     }
 }
+@keyframes scroll-down {
+    0% {
+      top: -10px;
+    }
+    50%{
+      top: 30px;
+    }
+    100%{
+      top: 100px;
+    }
+  }
 @media screen and (max-width : 450px){
     .homeBackground{
         .center{

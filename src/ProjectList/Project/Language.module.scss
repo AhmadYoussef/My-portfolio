@@ -1,13 +1,10 @@
 @import "../../assets/Scss/variable.scss";
 .langContainer{
     padding: 0.1vw 1vw;
-    margin: 0 1%;
+    margin: 3px;
     border: 1px solid $dark-orange; 
     border-radius: 20px;
     color: $dark-orange;
-    &:first-of-type{
-        margin-left: 0;
-    }
     p{
         margin: 0;
     }

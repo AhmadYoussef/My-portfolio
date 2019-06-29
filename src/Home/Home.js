@@ -3,7 +3,7 @@ import classes from './home.module.scss';
 
 const Home = () => {
     return (
-        <div className={classes.homeBackground}>
+        <div id="home" className={classes.homeBackground}>
             <div className={classes.center}>
                 <h2>
                     Hi, <span>I’m</span> Ahmad Youssef.</h2>
@@ -19,6 +19,9 @@ const Home = () => {
                         <img src={require('../assets/images/svg/github.svg')} alt="github" />
                     </div>
                 </div>
+            </div>
+            <div className={classes.scrolly}>
+                <div className={classes.dot}></div>
             </div>
         </div>
     );

@@ -39,7 +39,7 @@ class Contact extends React.Component {
     state = { formTag: [...initState] };
     render() {
         return (
-            <div className={classes.contactContainer}>
+            <div id="contact" className={classes.contactContainer}>
                 <h2>Contact</h2>
 
                 <form>

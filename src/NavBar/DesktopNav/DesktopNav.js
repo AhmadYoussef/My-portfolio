@@ -5,21 +5,21 @@ import classes from './DesktopNav.module.scss';
 const DesktopNav = () => {
     return (
         <>
-            <div className={classes.logo}>
-                <div style={{ backgroundColor: "#333333" }}>
+            <div id="#root" className={classes.logo}>
+                <a href="#home"><div style={{ backgroundColor: "#333333" }}>
                     <img src={require("../../assets/images/logo.png")} alt="" />
-                </div>
+                </div></a>
             </div>
             <div className={classes.nav}>
                 <ul>
-                    <li>Home</li>
+                    <a href="#root"><li>Home</li></a>
                     <li></li>
-                    <li>About Me</li>
+                    <a href="#about"><li>About Me</li></a>
                 </ul>
                 <ul>
-                    <li>Project</li>
+                    <a href="#project"><li>Project</li></a>
                     <li></li>
-                    <li>Content</li>
+                    <a href="#contact"><li>Content</li></a>
                 </ul>
             </div>
         </>

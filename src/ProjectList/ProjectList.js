@@ -1,17 +1,16 @@
 import React from 'react';
 import classes from './ProjectList.module.scss';
 import Project from './Project/Project';
+import { projects } from '../assets/data/Data';
 
 const ProjectList = () => {
     return (
-        <div className={classes.projectList}>
+        <div id="project" className={classes.projectList}>
             <h2>Projects</h2>
             <div className={classes.projectContainer}>
-                <Project />
-                <Project />
-                <Project />
-                <Project />
-                <Project />
+                {
+                    projects.map(item => <Project key={item.id} {...item} />)
+                }
             </div>
         </div>
     );

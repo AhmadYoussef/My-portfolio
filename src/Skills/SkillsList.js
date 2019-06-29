@@ -3,7 +3,8 @@ import Swiper from 'react-id-swiper';
 import { Pagination, Navigation } from 'swiper/dist/js/swiper.esm';
 import './slider.scss';
 import classes from './SkillsList.module.scss';
-import Skill from './Skill/Skill'
+import Skill from './Skill/Skill';
+import { skills } from '../assets/data/Data';
 
 
 const SkillsList = () => {
@@ -24,8 +25,8 @@ const SkillsList = () => {
             },
             450: {
                 // centeredSlides: false,
-                slidesPerView: 2,
-                spaceBetween: 100
+                slidesPerView: 1,
+                spaceBetween: 0
             }
         },
         pagination: {
@@ -45,24 +46,15 @@ const SkillsList = () => {
             <h2>Skills</h2>
             <div className={classes.skillsSlider}>
                 <Swiper {...params} className={classes.swiper} >
-                    <div>
-                        <Skill />
-                    </div>
-                    <div>
-                        <Skill />
-                    </div>
-                    <div>
-                        <Skill />
-                    </div>
-                    <div>
-                        <Skill />
-                    </div>
-                    <div>
-                        <Skill />
-                    </div>
-                    <div>
-                        <Skill />
-                    </div>
+                    {
+                        skills.map(item => (
+                            <div key={item.id}>
+                                <Skill {...item} />
+                            </div>
+                        ))
+                    }
+
+
                 </Swiper>
             </div>
         </div >
