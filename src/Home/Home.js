@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './home.module.scss';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import { langData } from '../assets/data/Data';
+import { Animate } from 'react-simple-animate';
 
 const Home = (props) => {
     let content = { ...langData.en };
@@ -13,7 +14,14 @@ const Home = (props) => {
     return (
         <div id="home" className={classes.homeBackground}>
             <div className={classes.center}>
-                {content.homeText1()}
+                <Animate
+                    play
+                    duration={1}
+                    start={{ opacity: 0, filter: 'blur(20px)', transform: 'translateX(-40px)' }}
+                    end={{ opacity: 1, filter: 'blur(0)', transform: 'translateX(0)' }}
+                >
+                    {content.homeText1()}
+                </Animate>
                 <div className={classes.dowAndLogo}>
                     {content.homeText2()}
                     <div className={classes.logos}>

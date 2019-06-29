@@ -8,31 +8,46 @@ const initState = [
         elementTag: 'input',
         type: 'text',
         name: 'firstName',
-        placeHolder: "Please enter your First Name",
+        placeHolder: {
+            en: "Please enter your First Name",
+            de: "ge Please enter your First Name"
+        },
     },
     {
         elementTag: 'input',
         type: 'text',
         name: 'lastName',
-        placeHolder: "Please enter your last Name",
+        placeHolder: {
+            en: "Please enter your last Name",
+            de: "Please enter your last Name"
+        },
     },
     {
         elementTag: 'input',
         type: 'text',
         name: 'email',
-        placeHolder: "Please enter your email address",
+        placeHolder: {
+            en: "Please enter your email address",
+            de: "Please enter your email address"
+        },
     },
     {
         elementTag: 'input',
         type: 'text',
         name: 'telephone',
-        placeHolder: "Please enter your telephone number",
+        placeHolder: {
+            en: "Please enter your telephone number",
+            de: "Please enter your telephone number"
+        },
     },
     {
         elementTag: 'textarea',
         type: 'text',
         name: 'message',
-        placeHolder: "Please enter your Message...",
+        placeHolder: {
+            en: "Please enter your Message...",
+            de: "Please enter your Message..."
+        },
     },
 ]
 
@@ -49,7 +64,7 @@ class Contact extends React.Component {
                 <form>
                     <p>{content.contactText}</p>
                     {
-                        this.state.formTag.map(item => <Input key={item.name} {...item} />)
+                        this.state.formTag.map(item => <Input key={item.name} lang={this.props.lang} {...item} />)
                     }
                     <button type="submit">Send</button>
                 </form>
