@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 
-const DesktopNav = () => {
+const DesktopNav = (props) => {
     const scroll = (el) => {
         window.scrollTo({ top: el.offsetTop - 50, left: 0, behavior: 'smooth' })
     }
     return (
         <>
             <div className={classes.logo}>
-                <NavLink to="/#home"
+                <NavLink to={`${props.path}#home`}
                     smooth>
                     <div style={{ backgroundColor: "#333333" }}>
                         <img src={require("../../assets/images/logo.png")} alt="" />
@@ -20,28 +20,28 @@ const DesktopNav = () => {
             </div>
             <div className={classes.nav}>
                 <ul>
-                    <NavLink smooth to="/#home">
-                        <li>Home</li>
+                    <NavLink smooth to={`${props.path}#home`}>
+                        <li>{props.home}</li>
                     </NavLink>
                     <li></li>
-                    <NavLink to="/#about"
+                    <NavLink to={`${props.path}#about`}
                         scroll={el => scroll(el)}>
-                        <li>About Me</li>
+                        <li>{props.about}</li>
                     </NavLink>
                 </ul>
                 <ul>
                     <NavLink
-                        to="/#project"
+                        to={`${props.path}#project`}
                         scroll={el => scroll(el)}
-                    ><li>Project</li></NavLink>
+                    ><li>{props.project}</li></NavLink>
                     <li></li>
-                    <NavLink to="/#contact"
+                    <NavLink to={`${props.path}#contact`}
                         scroll={el => scroll(el)}>
-                        <li>Contact</li>
+                        <li>{props.contact}</li>
                     </NavLink>
                 </ul>
             </div>
-            <div className={classes.languageSite}><Link to="/en">EN </Link><span>|</span><Link to="/de"> DE</Link></div>
+            <div className={classes.languageSite}><Link to="/en" onClick={() => props.updatePath('/')}>EN </Link><span>|</span><Link to="/de" onClick={() => props.updatePath('de')}> DE</Link></div>
         </>
     );
 }

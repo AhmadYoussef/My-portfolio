@@ -27,13 +27,13 @@ class SideNavBar extends React.Component {
         return (
             <>
                 <div className={classes.mobNav}>
-                    <NavLink smooth to="/#home" onClick={this.hidingNav}>
+                    <NavLink smooth to={`${this.props.path}#home`} onClick={this.hidingNav}>
                         <div className={classes.logo}>
                             <img src={require('../../assets/images/logo.png')} alt="Logo" />
                         </div>
                     </NavLink>
                     <div className={classes.btnLang}>
-                        <div className={classes.languageSite}><Link to="/en">EN </Link><span>|</span><Link to="/de"> DE</Link></div>
+                        <div className={classes.languageSite}><Link to="/" onClick={() => this.props.updatePath('/')}>EN </Link><span>|</span><Link to="/de" onClick={() => this.props.updatePath('de')}> DE</Link></div>
                         <button className={classes.hamburger} onClick={this.showingNav}>
                             <img src={require('./hamburgerBtn.svg')} alt="Hamburger Button" />
                         </button>
@@ -41,23 +41,23 @@ class SideNavBar extends React.Component {
                 </div>
                 <div className={sideBar}>
                     <ul >
-                        <NavLink smooth to="#home" onClick={this.hidingNav}>
-                            <li>Home</li>
+                        <NavLink smooth to={`${this.props.path}#home`} onClick={this.hidingNav}>
+                            <li>{this.props.home}</li>
                         </NavLink>
-                        <NavLink to="#about"
+                        <NavLink to={`${this.props.path}#about`}
                             scroll={el => this.scroll(el)}
                             onClick={this.hidingNav}>
-                            <li>About Me</li>
+                            <li>{this.props.about}</li>
                         </NavLink>
-                        <NavLink to="#project"
+                        <NavLink to={`${this.props.path}#project`}
                             scroll={el => this.scroll(el)}
                             onClick={this.hidingNav}>
-                            <li>Project</li>
+                            <li>{this.props.project}</li>
                         </NavLink>
-                        <NavLink to="#contact"
+                        <NavLink to={`${this.props.path}#contact`}
                             scroll={el => this.scroll(el)}
                             onClick={this.hidingNav}>
-                            <li>Contact</li>
+                            <li>{this.props.contact}</li>
                         </NavLink>
                     </ul>
                     <button className={classes.hamburger} onClick={this.hidingNav}>

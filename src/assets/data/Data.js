@@ -75,7 +75,7 @@ export const langData = {
         home: "Home",
         about: "About",
         skills: "Skills",
-        project: "Project",
+        project: "Projects",
         contact: "Contact",
         projectBtn: 'View',
         contactText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequatur vitae                    libero quis nihil! Rerum voluptates, voluptatibus alias ullam ad dolores, earum                      possimus ea fuga placeat aliquam molestias laudantium iusto.`,
