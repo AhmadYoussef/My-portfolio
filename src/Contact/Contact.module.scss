@@ -29,6 +29,7 @@ $dark-black: rgb(33,33,33);
         }
         textarea{
             width: 100%;
+            resize: none;
         }
         button{
             background-color: $black-color;

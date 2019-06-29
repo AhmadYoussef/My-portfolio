@@ -7,10 +7,10 @@ const Home = () => {
         <div id="home" className={classes.homeBackground}>
             <div className={classes.center}>
                 <h2>
-                    Hi, <span>I’m</span> Ahmad Youssef.</h2>
-                <h2> I am Front-end Develper</h2>
+                    Hi, <span>i’m</span> Ahmad Youssef.</h2>
+                <h2> I am Front-End Develper.</h2>
                 <div className={classes.dowAndLogo}>
-                    <p>Feel free to download my CV <span>Here:</span> <br />
+                    <p>Feel free to download my CV <span>here:</span> <br />
                         <span>German</span> - <span>English</span>
                     </p>
                     <div className={classes.logos}>
