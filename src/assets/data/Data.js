@@ -4,44 +4,44 @@ export const skills = [
     {
         id: 1,
         logoImg: "reactJs.svg",
-        en: 'Good knowledge in ReactJs, React-Router, Style-Component, Style-module',
-        de: 'GE Good knowledge in ReactJs, React-Router, Style-Component, Style-module'
+        en: 'I have the ability to handle any Problem with ReactJs',
+        de: 'Ich kann jedes Problem mit ReactJs lösen'
     },
     {
         id: 2,
         logoImg: "javaScript.png",
-        en: 'Good knowledge in Es5, ES6, Asynchronous JavaScript',
-        de: 'Good knowledge in Es5, ES6, Asynchronous JavaScript'
+        en: 'Well knowledge in Es5, Es6 to create a fully functional website.',
+        de: 'Fundiertes Wissen in Es5, Es6, um eine voll funktionsfähige Website zu erstellen.'
     },
     {
         id: 3,
         logoImg: "sass.svg",
-        en: 'Good knowledge with Latest Scss technology.',
-        de: 'Good knowledge with Latest Scss technology.'
+        en: 'Well knowledge to Style website with less code.',
+        de: 'Fundiertes Wissen zur Style-Website mit weniger Code.'
     },
     {
         id: 4,
         logoImg: "css3.svg",
-        en: 'Good sense in selecting element for a design.',
-        de: 'Good sense in selecting element for a design.'
+        en: 'Good sense by styling a layout of the website using the right property.',
+        de: 'Sinnvoll, indem Sie ein Layout der Website mit der richtigen Eigenschaft gestalten.'
     },
     {
         id: 5,
         logoImg: "html5.svg",
-        en: 'Good structure for building bone of website.',
-        de: 'Good structure for building bone of website.'
+        en: 'The best structure for building bones of the website by using html5 Tags.',
+        de: 'Die beste Struktur zum Erstellen von Bones der Website mithilfe von HTML5-Tags.'
     },
     {
         id: 6,
         logoImg: "bootstrap.svg",
         en: 'Good knowledge in bootstrap.',
-        de: 'Good knowledge in bootstrap.'
+        de: 'Gute Kenntnisse in Bootstrap.'
     },
     {
         id: 7,
         logoImg: "jQuery.svg",
-        en: '',
-        de: ''
+        en: 'Good knowledge in Jquery',
+        de: 'Gute Kenntnisse in Jquery.'
     },
 
 ]
@@ -65,7 +65,7 @@ export const projects = [
     {
         id: 4,
         images: 'lutfi/1.png',
-        languages: ['HTML', 'css', 'JavaScript', 'JQuery', 'PHP'],
+        languages: ['HTML', 'CSS', 'JavaScript', 'JQuery', 'PHP'],
     }
 ]
 
@@ -78,7 +78,7 @@ export const langData = {
         project: "Projects",
         contact: "Contact",
         projectBtn: 'View',
-        contactText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequatur vitae                    libero quis nihil! Rerum voluptates, voluptatibus alias ullam ad dolores, earum                      possimus ea fuga placeat aliquam molestias laudantium iusto.`,
+        contactText: `I am always open for new opportunities and for new visions. So let's get in touch by                  dropping me a line.`,
         homeText1: () => (<><h2> Hi, <span>My name </span>is Ahmad Youssef.</h2>
             <h2> I am a Front-End Develper.</h2></>),
         homeText2: () => (<p>Feel free to download my CV <span>here:</span><br />
@@ -92,11 +92,11 @@ export const langData = {
     de: {
         home: "Startseite",
         about: "Über mich",
-        skills: "Programmierkenntnisse",
+        skills: "SKills",
         project: "Projekte",
         contact: "Kontakt",
         projectBtn: "Ansicht",
-        contactText: `Ge Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequatur vitae                    libero quis nihil! Rerum voluptates, voluptatibus alias ullam ad dolores, earum                      possimus ea fuga placeat aliquam molestias laudantium iusto.`,
+        contactText: `Ich bin immer offen für neue Möglichkeiten und Visionen. Also lassen Sie uns Kontakt                  aufnehmen indem Sie mir schreiben.`,
         homeText1: () => (<><h2> Hi, <span>Mein Name </span>ist Ahmed Youssef.</h2>
             <h2>Ich bin Front-End-Entwickler.</h2></>),
         homeText2: () => (<p>Hier finden Sie meinen Lebenslauf:<br />
