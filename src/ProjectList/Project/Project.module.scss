@@ -28,7 +28,7 @@ $dark-black: rgb(33,33,33);
         .btnContainer{
             display: flex;
             justify-content: space-between;
-            button{
+            .btn{
                 background-color: $black-color;
                 padding: 8px 15px;
                 color: $dark-orange;
@@ -36,6 +36,12 @@ $dark-black: rgb(33,33,33);
                 border-radius: 5px;
                 cursor: pointer;
                 box-shadow: 0px 3px 5px -3px  $black-color;  
+                &.disable{
+                    pointer-events: none;
+                    box-shadow: unset ;  
+                    cursor: default;
+                    color: gray;
+                }
                 &:hover{
                 background-color: $dark-black;
                 }

@@ -3,6 +3,9 @@ import classes from './Project.module.scss';
 import Language from './Language';
 
 const Project = (props) => {
+    let btn = classes.btn;
+    if (props.disable)
+        btn += ' ' + classes.disable
     return (
         <figure className={classes.projectContainer}>
             <div className={classes.imgContainer}>
@@ -14,11 +17,11 @@ const Project = (props) => {
 
                 </div>
                 <div className={classes.btnContainer}>
-                    <button>Code</button>
-                    <button>{props.btnText}</button>
+                    <a className={btn} target='_blank' rel="external" href={props.codeLink} >Code</a>
+                    <a className={classes.btn} target='_blank' rel="external" href={props.viewLink} >{props.btnText}</a>
                 </div>
-            </figcaption>
-        </figure>
+            </figcaption >
+        </figure >
     );
 }
 

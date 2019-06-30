@@ -1,5 +1,5 @@
 @import '../assets/Scss/variable.scss';
-$dark-black: rgb(33,33,33);
+
 
 .contactContainer{
     background-color: $gray-color ;
@@ -18,11 +18,18 @@ $dark-black: rgb(33,33,33);
         max-width: 1200px;
         width: 70%;
         input, textarea{
+            position: relative;
             padding: 10px 19px;     
             margin: 10px 0;
             border: 1px solid $dark-orange;
             border-radius: 20px;    
             background-color: transparent; 
+            &.error{
+                border: 1px solid red;
+            }
+            &.error::placeholder{
+                color: red;
+            }
         }
         input{
             width: 48%;
@@ -31,8 +38,9 @@ $dark-black: rgb(33,33,33);
             width: 100%;
             resize: none;
         }
-        button{
+        input[type="submit"]{
             background-color: $black-color;
+            width: unset;
             padding: 8px 15px;
             color: $dark-orange;
             border: 0;

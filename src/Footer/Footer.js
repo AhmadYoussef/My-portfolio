@@ -3,9 +3,6 @@ import classes from './Footer.module.scss';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 const Footer = () => {
-    const scroll = (el) => {
-        window.scrollTo({ top: el.offsetTop - 50, left: 0, behavior: 'smooth' })
-    }
     return (
         <footer>
             <div className={classes.topFooter}>
