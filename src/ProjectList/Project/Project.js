@@ -17,8 +17,8 @@ const Project = (props) => {
 
                 </div>
                 <div className={classes.btnContainer}>
-                    <a className={btn} target='_blank' rel="external" href={props.codeLink} >Code</a>
-                    <a className={classes.btn} target='_blank' rel="external" href={props.viewLink} >{props.btnText}</a>
+                    <a className={btn} target='_blank' rel="noopener noreferrer" href={props.codeLink} >Code</a>
+                    <a className={classes.btn} target='_blank' rel="noopener noreferrer" href={props.viewLink} >{props.btnText}</a>
                 </div>
             </figcaption >
         </figure >
