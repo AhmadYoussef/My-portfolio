@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "nodemon server  ",
-    "start": "run-p server startReact"
+    "start": "run-p startReact server "
   },
   "eslintConfig": {
     "extends": "react-app"

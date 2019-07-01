@@ -2,8 +2,8 @@ const express = require('express');
 // const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
-const api_key = '27dd2229f7677c937bd4f6a4482af9c5-2b778fc3-280f6572';
-const domain = 'sandbox509b386ca5f04443b620c576601a1cfe.mailgun.org';
+const api_key = 'b911e64d04b90f010db4bfdc1f87ff03-2b0eef4c-443f1981';
+const domain = 'http://sandbox6ff5e1c2399b46d5a9857a74cc1329f4.mailgun.org';
 const mailGun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
 
@@ -26,6 +26,8 @@ app.post('/sendMail', function (req, res) {
     };
 
     mailGun.messages().send(data, function (error, body) {
+        console.log(error, body);
+
         if (error) {
             return res.send({ sent: false, message: 'Not Send' });
         };
