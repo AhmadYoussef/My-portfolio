@@ -1,5 +1,6 @@
 {
   "name": "copy-one-portfolio",
+  "proxy": "https://gunmailer.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
